@@ -1,3 +1,3 @@
 # delli
 
-Delli project../
+Delli project...s
