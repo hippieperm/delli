@@ -21,6 +21,9 @@ class DelliApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       routerConfig: router,
+      theme: ThemeData(
+        fontFamily: "Pretendard",
+      ),
       builder: (context, child) {
         return MediaQuery(
           data: MediaQuery.of(context).copyWith(textScaleFactor: 1),
