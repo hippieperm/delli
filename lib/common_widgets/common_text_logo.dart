@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class CommonTextLogo extends StatelessWidget {
   const CommonTextLogo({
-    this.color = DelliColor.mainColor,
+    this.color = DelliColor.main,
     this.blendMode = BlendMode.srcIn,
     this.height = 50,
     this.width = 50,
