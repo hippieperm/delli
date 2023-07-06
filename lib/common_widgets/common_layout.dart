@@ -1,3 +1,4 @@
+import 'package:delli/styles/delli_color.dart';
 import 'package:flutter/material.dart';
 
 class CommonLayout extends StatelessWidget {
@@ -11,6 +12,7 @@ class CommonLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: DelliColor.white,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30),
