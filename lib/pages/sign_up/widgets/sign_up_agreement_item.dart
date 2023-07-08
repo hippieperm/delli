@@ -25,15 +25,13 @@ class SignUpAgreementItem extends StatelessWidget {
       height: 40,
       child: Row(
         children: [
-          SizedBox(
-            height: 24,
-            width: 24,
-            child: GestureDetector(
-              onTap: onTap,
-              child: CommonSvg(
-                path: 'assets/icon/checkbox_icon.svg',
-                color: color,
-              ),
+          GestureDetector(
+            onTap: onTap,
+            child: CommonSvg(
+              path: 'assets/icon/checkbox_icon.svg',
+              color: color,
+              width: 24,
+              height: 24,
             ),
           ),
           const SizedBox(width: 8),
