@@ -10,7 +10,7 @@ class CommonTextButton extends StatelessWidget {
     this.width,
     this.backgroundColor = DelliColor.main,
     this.enabled,
-    this.borderRadius = 10,
+    this.borderRadius = 8,
     super.key,
   });
 
