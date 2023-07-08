@@ -1,10 +1,10 @@
 import 'package:delli/common_widgets/common_layout.dart';
 import 'package:delli/common_widgets/common_main_logo.dart';
+import 'package:delli/common_widgets/common_svg.dart';
 import 'package:delli/pages/login/widgets/login_choice_button.dart';
 import 'package:delli/styles/delli_color.dart';
 import 'package:delli/styles/delli_text_styles.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class LoginChoicePage extends StatelessWidget {
   const LoginChoicePage({Key? key}) : super(key: key);
@@ -38,10 +38,11 @@ class _ChoiceBody extends StatelessWidget {
       children: [
         LoginChoiceButton(
           buttonColor: DelliColor.grayF4,
-          prefixIcon: SvgPicture.asset(
-            "assets/icon/email_icon.svg",
+          prefixIcon: CommonSvg(
+            path: "assets/icon/email_icon.svg",
             width: 20,
             height: 20,
+            color: DelliColor.black,
           ),
           buttonText: "이메일로 시작하기",
           onTap: () {},
