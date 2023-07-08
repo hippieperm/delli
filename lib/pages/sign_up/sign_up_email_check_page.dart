@@ -30,7 +30,10 @@ class SignUpEmailCheckPage extends StatelessWidget {
           CommonTextButton(
             onPressed: () {},
             height: 62,
-            commonText: CommonText(text: "다음"),
+            commonText: CommonText(
+              text: "다음",
+              textStyle: DelliTextStyles.button,
+            ),
           ),
           SizedBox(height: 55),
         ],
