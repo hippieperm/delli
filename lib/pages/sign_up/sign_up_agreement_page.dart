@@ -72,9 +72,9 @@ class _AgreementBodyState extends State<_AgreementBody> {
               InkWell(
                 onTap: toggleCheck1,
                 child: isChecked1
-                    ? CommonSvg(path: "assets/icon/check_icon.svg")
+                    ? CommonSvg(path: "assets/icon/checkbox_icon.svg")
                     : CommonSvg(
-                        path: "assets/icon/check_icon.svg",
+                        path: "assets/icon/checkbox_icon.svg",
                         color: DelliColor.grayD7,
                       ),
               ),
@@ -99,9 +99,9 @@ class _AgreementBodyState extends State<_AgreementBody> {
               InkWell(
                 onTap: toggleCheck2,
                 child: isChecked2
-                    ? CommonSvg(path: "assets/icon/check_icon.svg")
+                    ? CommonSvg(path: "assets/icon/checkbox_icon.svg")
                     : CommonSvg(
-                        path: "assets/icon/check_icon.svg",
+                        path: "assets/icon/checkbox_icon.svg",
                         color: DelliColor.grayD7,
                       ),
               ),
@@ -121,11 +121,7 @@ class _AgreementBodyState extends State<_AgreementBody> {
         ),
         const SizedBox(height: 25),
         CommonTextButton(
-          onPressed: isButtonEnabled
-              ? () {
-                  print("체크박스 && 버튼 클릭");
-                }
-              : null,
+          onPressed: isButtonEnabled ? () {} : null,
           commonText: const CommonText(
             text: "다음",
             textStyle: DelliTextStyles.button,
