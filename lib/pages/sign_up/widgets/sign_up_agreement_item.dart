@@ -7,16 +7,16 @@ import '../../../styles/delli_text_styles.dart';
 
 class SignUpAgreementItem extends StatelessWidget {
   const SignUpAgreementItem({
-    required this.color,
     required this.title,
-    required this.subTitle,
+    this.color = DelliColor.grayD7,
+    this.required = true,
     this.onTap,
     super.key,
   });
 
-  final Color color;
   final String title;
-  final String subTitle;
+  final Color color;
+  final bool required;
   final Function()? onTap;
 
   @override
@@ -40,10 +40,11 @@ class SignUpAgreementItem extends StatelessWidget {
           CommonText(
             text: title,
             textStyle: DelliTextStyles.body1,
+            color: DelliColor.black,
           ),
           const SizedBox(width: 8),
           CommonText(
-            text: subTitle,
+            text: required ? '(필수)' : '(선택)',
             textStyle: DelliTextStyles.body1,
             color: DelliColor.gray88,
           ),

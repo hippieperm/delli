@@ -43,14 +43,11 @@ class _AgreementBody extends StatelessWidget {
     return Column(
       children: [
         SignUpAgreementItem(
-          color: DelliColor.grayD7,
           title: '서비스 이용약관',
-          subTitle: ('(필수)'),
         ),
         SignUpAgreementItem(
           color: DelliColor.main,
           title: '개인정보 수집 및 이용동의',
-          subTitle: ('(필수)'),
         ),
         SizedBox(height: 25),
         CommonTextButton(
