@@ -4,8 +4,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class CommonMainLogo extends StatelessWidget {
   const CommonMainLogo({
-    this.width = 50,
-    this.height = 50,
+    this.width = 86,
+    this.height = 82,
     this.color = DelliColor.main,
     this.blendMode = BlendMode.srcIn,
     super.key,
