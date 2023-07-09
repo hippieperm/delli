@@ -14,9 +14,13 @@ class CommonLayout extends StatelessWidget {
     return Scaffold(
       backgroundColor: DelliColor.white,
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 30),
-          child: child,
+        child: SizedBox(
+          width: double.infinity,
+          height: double.infinity,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30),
+            child: child,
+          ),
         ),
       ),
     );

@@ -13,7 +13,6 @@ class LoginChoicePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const CommonLayout(
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Spacer(),
           CommonMainLogo(

@@ -6,8 +6,8 @@ class CommonTextLogo extends StatelessWidget {
   const CommonTextLogo({
     this.color = DelliColor.main,
     this.blendMode = BlendMode.srcIn,
-    this.height = 50,
-    this.width = 50,
+    this.height = 33,
+    this.width = 83,
     Key? key,
   }) : super(key: key);
 

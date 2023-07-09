@@ -8,6 +8,13 @@ class DelliTextStyles {
     height: 1.5,
   );
 
+  static const TextStyle body1_500 = TextStyle(
+    fontFamily: "Pretendard",
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+    height: 1.5,
+  );
+
   static const TextStyle body2 = TextStyle(
     fontFamily: "Pretendard",
     fontSize: 14,
