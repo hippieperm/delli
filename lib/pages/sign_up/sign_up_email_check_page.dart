@@ -5,6 +5,8 @@ import 'package:delli/styles/delli_color.dart';
 import 'package:delli/styles/delli_text_styles.dart';
 import 'package:flutter/material.dart';
 
+import '../../common_widgets/common_outline_text_form_field.dart';
+
 class SignUpEmailCheckPage extends StatelessWidget {
   const SignUpEmailCheckPage({super.key});
 
@@ -20,11 +22,9 @@ class SignUpEmailCheckPage extends StatelessWidget {
             textStyle: DelliTextStyles.header3,
           ),
           SizedBox(height: 38),
-          //todo: 컨테이너 -> 텍스트필드
-          Container(
-            width: double.infinity,
+          SizedBox(
             height: 50,
-            color: DelliColor.grayF4,
+            child: CommonOutlineTextFormField(hintText: '인증 코드(6자리)를 입력해주세요.'),
           ),
           Spacer(),
           CommonTextButton(
