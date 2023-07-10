@@ -23,10 +23,7 @@ class SignUpEmailCheckPage extends StatelessWidget {
             color: DelliColor.black,
           ),
           const SizedBox(height: 38),
-          const SizedBox(
-            height: 50,
-            child: CommonOutlineTextFormField(hintText: '인증 코드(6자리)를 입력해주세요.'),
-          ),
+          CommonOutlineTextFormField(hintText: '인증 코드(6자리)를 입력해 주세요.'),
           const Spacer(),
           CommonTextButton(
             onPressed: () {},
