@@ -27,7 +27,7 @@ class SignUpPhoneCheckPage extends StatelessWidget {
             textStyle: DelliTextStyles.body2,
             color: DelliColor.gray88,
           ),
-          const SizedBox(height: 37),
+          const SizedBox(height: 38),
           Row(
             children: [
               const Expanded(
