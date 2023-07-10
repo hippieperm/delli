@@ -23,25 +23,16 @@ class SignUpEmailPasswdPage extends StatelessWidget {
             color: DelliColor.black,
           ),
           const SizedBox(height: 38),
-          const SizedBox(
-            height: 50,
-            child: CommonOutlineTextFormField(hintText: '이메일 주소를 입력해주세요.'),
-          ),
+          CommonOutlineTextFormField(hintText: '이메일 주소를 입력해 주세요.'),
           const SizedBox(height: 45),
-          const SizedBox(
-            height: 50,
-            child: CommonOutlineTextFormField(
-              hintText: '비밀번호를 입력해주세요.',
-              obscureText: true,
-            ),
+          CommonOutlineTextFormField(
+            hintText: '비밀번호를 입력해 주세요.',
+            obscureText: true,
           ),
           const SizedBox(height: 34),
-          const SizedBox(
-            height: 50,
-            child: CommonOutlineTextFormField(
-              hintText: '한번 더 비밀번호를 입력해주세요.',
-              obscureText: true,
-            ),
+          CommonOutlineTextFormField(
+            hintText: '한번 더 비밀번호를 입력해 주세요.',
+            obscureText: true,
           ),
           const Spacer(),
           CommonTextButton(
