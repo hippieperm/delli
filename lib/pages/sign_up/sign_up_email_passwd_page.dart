@@ -4,6 +4,7 @@ import 'package:delli/common_widgets/common_text_button.dart';
 import 'package:delli/styles/delli_text_styles.dart';
 import 'package:flutter/material.dart';
 
+import '../../common_widgets/common_outline_text_form_field.dart';
 import '../../styles/delli_color.dart';
 
 class SignUpEmailPasswdPage extends StatelessWidget {
@@ -15,42 +16,35 @@ class SignUpEmailPasswdPage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          SizedBox(height: 83),
-          CommonText(
+          const SizedBox(height: 83),
+          const CommonText(
             text: '델리에서 회원가입을 위해\n이메일과 비밀번호를 입력해 주세요.',
             textStyle: DelliTextStyles.header3,
+            color: DelliColor.black,
           ),
-          SizedBox(height: 38),
-          // todo:  컨테이너 -> 텍스트필드
-          Container(
-            width: double.infinity,
-            height: 50,
-            color: DelliColor.grayF4,
+          const SizedBox(height: 38),
+          CommonOutlineTextFormField(hintText: '이메일 주소를 입력해 주세요.'),
+          const SizedBox(height: 45),
+          CommonOutlineTextFormField(
+            hintText: '비밀번호를 입력해 주세요.',
+            obscureText: true,
           ),
-          SizedBox(height: 45),
-          // todo:  컨테이너 -> 텍스트필드
-          Container(
-            width: double.infinity,
-            height: 50,
-            color: DelliColor.grayF4,
+          const SizedBox(height: 34),
+          CommonOutlineTextFormField(
+            hintText: '한번 더 비밀번호를 입력해 주세요.',
+            obscureText: true,
           ),
-          SizedBox(height: 34),
-          // todo:  컨테이너 -> 텍스트필드
-          Container(
-            width: double.infinity,
-            height: 50,
-            color: DelliColor.grayF4,
-          ),
-          Spacer(),
+          const Spacer(),
           CommonTextButton(
             onPressed: () {},
             height: 62,
-            commonText: CommonText(
+            commonText: const CommonText(
               text: '다음',
               textStyle: DelliTextStyles.button,
+              color: DelliColor.white,
             ),
           ),
-          SizedBox(height: 55),
+          const SizedBox(height: 55),
         ],
       ),
     );
