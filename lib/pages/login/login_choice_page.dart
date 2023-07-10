@@ -1,6 +1,7 @@
 import 'package:delli/common_widgets/common_layout.dart';
 import 'package:delli/common_widgets/common_main_logo.dart';
 import 'package:delli/common_widgets/common_svg.dart';
+import 'package:delli/common_widgets/common_text_logo.dart';
 import 'package:delli/pages/login/widgets/login_choice_button.dart';
 import 'package:delli/styles/delli_color.dart';
 import 'package:delli/styles/delli_text_styles.dart';
@@ -16,12 +17,17 @@ class LoginChoicePage extends StatelessWidget {
         children: [
           Spacer(),
           CommonMainLogo(
-            width: 110,
-            height: 104,
+            width: 86,
+            height: 82,
+          ),
+          SizedBox(height: 16),
+          CommonTextLogo(
+            width: 116,
+            height: 45,
           ),
           Spacer(),
           _ChoiceBody(),
-          SizedBox(height: 58),
+          SizedBox(height: 55),
         ],
       ),
     );
@@ -37,9 +43,9 @@ class _ChoiceBody extends StatelessWidget {
       children: [
         LoginChoiceButton(
           buttonColor: DelliColor.grayF4,
-          prefixIcon: CommonSvg(
+          prefixIcon: const CommonSvg(
             path: "assets/icon/email_icon.svg",
-            width: 20,
+            width: 24,
             height: 20,
             color: DelliColor.black,
           ),
@@ -56,24 +62,6 @@ class _ChoiceBody extends StatelessWidget {
           ),
           buttonText: "카카오로 시작하기",
           onTap: () {},
-        ),
-        const SizedBox(height: 19),
-        RichText(
-          text: TextSpan(
-            style: DelliTextStyles.body1.apply(
-              color: DelliColor.black,
-            ),
-            children: [
-              const TextSpan(text: "이미 계정이 있나요? "),
-              TextSpan(
-                text: "로그인",
-                style: DelliTextStyles.body1.apply(
-                  color: DelliColor.main,
-                  decoration: TextDecoration.underline,
-                ),
-              ),
-            ],
-          ),
         ),
       ],
     );
