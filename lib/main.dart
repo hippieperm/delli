@@ -9,6 +9,7 @@ void main() {
       statusBarColor: Colors.transparent,
       statusBarIconBrightness: Brightness.dark,
       systemNavigationBarIconBrightness: Brightness.light,
+      statusBarBrightness: Brightness.light,
     ),
   );
   runApp(const DelliApp());
