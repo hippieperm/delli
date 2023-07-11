@@ -36,8 +36,8 @@ class CommonTextButton extends StatelessWidget {
                 ? onPressed
                 : null,
         style: ElevatedButton.styleFrom(
-          backgroundColor: backgroundColor,
-          disabledBackgroundColor: backgroundColor,
+          backgroundColor: enabled == false ? DelliColor.grayD7 : backgroundColor,
+          disabledBackgroundColor: enabled == false ? DelliColor.grayD7 : backgroundColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(borderRadius),
           ),
