@@ -21,12 +21,19 @@ class SignUpModel with ChangeNotifier {
     };
   }
 
-
   bool buttonActivate(List<String> list) {
-    for(String string in list) {
-      if(string == "") return false;
+    for (String string in list) {
+      if (string == "") return false;
     }
     return true;
+  }
+
+  @override
+  void dispose() {
+    textFieldControllers.forEach((key, value) {
+      value.dispose();
+    });
+    super.dispose();
   }
 }
 
