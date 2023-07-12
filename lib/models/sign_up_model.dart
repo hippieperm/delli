@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SignUpModel with ChangeNotifier {
-  late final Map<SignUpTextFieldsEnum, TextEditingController>
-      textFieldControllers;
+  late final Map<SignUpTextFieldsEnum, TextEditingController> textFieldControllers;
 
   void init() {
     textFieldControllers = {
@@ -15,6 +14,14 @@ class SignUpModel with ChangeNotifier {
           notifyListeners();
         }),
       SignUpTextFieldsEnum.passwordCheck: TextEditingController()
+        ..addListener(() {
+          notifyListeners();
+        }),
+      SignUpTextFieldsEnum.phoneNumber: TextEditingController()
+        ..addListener(() {
+          notifyListeners();
+        }),
+      SignUpTextFieldsEnum.phoneAuthCode: TextEditingController()
         ..addListener(() {
           notifyListeners();
         }),
@@ -41,4 +48,6 @@ enum SignUpTextFieldsEnum {
   email,
   password,
   passwordCheck,
+  phoneNumber,
+  phoneAuthCode,
 }

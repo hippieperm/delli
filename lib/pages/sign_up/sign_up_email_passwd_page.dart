@@ -28,7 +28,7 @@ class _SignUpEmailPasswdPageState extends State<SignUpEmailPasswdPage> {
 
   @override
   Widget build(BuildContext context) {
-    final singUpModel = context.read<SignUpModel>();
+    final signUpModel = context.read<SignUpModel>();
 
     return CommonLayout(
       child: Form(
@@ -44,8 +44,7 @@ class _SignUpEmailPasswdPageState extends State<SignUpEmailPasswdPage> {
             ),
             const SizedBox(height: 38),
             CommonOutlineTextFormField(
-              controller:
-                  singUpModel.textFieldControllers[SignUpTextFieldsEnum.email],
+              controller: signUpModel.textFieldControllers[SignUpTextFieldsEnum.email],
               height: 77,
               hintText: '이메일 주소를 입력해 주세요.',
               validator: (value) {
@@ -54,8 +53,7 @@ class _SignUpEmailPasswdPageState extends State<SignUpEmailPasswdPage> {
             ),
             const SizedBox(height: 18),
             CommonOutlineTextFormField(
-              controller: singUpModel
-                  .textFieldControllers[SignUpTextFieldsEnum.password],
+              controller: signUpModel.textFieldControllers[SignUpTextFieldsEnum.password],
               height: 77,
               hintText: '비밀번호를 입력해 주세요.',
               suffixIcon: Padding(
@@ -76,8 +74,7 @@ class _SignUpEmailPasswdPageState extends State<SignUpEmailPasswdPage> {
             ),
             const SizedBox(height: 7),
             CommonOutlineTextFormField(
-              controller: singUpModel
-                  .textFieldControllers[SignUpTextFieldsEnum.passwordCheck],
+              controller: signUpModel.textFieldControllers[SignUpTextFieldsEnum.passwordCheck],
               height: 77,
               hintText: '한번 더 비밀번호를 입력해 주세요.',
               obscureText: true,
@@ -95,9 +92,7 @@ class _SignUpEmailPasswdPageState extends State<SignUpEmailPasswdPage> {
               validator: (value) {
                 return ValidatorHelper.compareValidator(
                   value,
-                  singUpModel
-                      .textFieldControllers[SignUpTextFieldsEnum.password]!
-                      .text,
+                  signUpModel.textFieldControllers[SignUpTextFieldsEnum.password]!.text,
                 );
               },
             ),
@@ -105,21 +100,13 @@ class _SignUpEmailPasswdPageState extends State<SignUpEmailPasswdPage> {
             Consumer<SignUpModel>(builder: (context, model, child) {
               return CommonTextButton(
                 onPressed: () {
-                  if(_formKey.currentState!.validate()) {
-
-                  }
+                  if (_formKey.currentState!.validate()) {}
                 },
-                enabled: singUpModel.buttonActivate(
+                enabled: signUpModel.buttonActivate(
                   [
-                    singUpModel
-                        .textFieldControllers[SignUpTextFieldsEnum.email]!.text,
-                    singUpModel
-                        .textFieldControllers[SignUpTextFieldsEnum.password]!
-                        .text,
-                    singUpModel
-                        .textFieldControllers[
-                            SignUpTextFieldsEnum.passwordCheck]!
-                        .text,
+                    signUpModel.textFieldControllers[SignUpTextFieldsEnum.email]!.text,
+                    signUpModel.textFieldControllers[SignUpTextFieldsEnum.password]!.text,
+                    signUpModel.textFieldControllers[SignUpTextFieldsEnum.passwordCheck]!.text,
                   ],
                 ),
                 height: 62,
