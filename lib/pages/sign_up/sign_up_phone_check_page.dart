@@ -32,7 +32,6 @@ class _SignUpPhoneCheckPageState extends State<SignUpPhoneCheckPage> {
     return CommonLayout(
       child: Form(
         key: _formKey,
-        //TODO: 여기까지 함
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
