@@ -58,11 +58,12 @@ class _SignUpPhoneCheckPageState extends State<SignUpPhoneCheckPage> {
                 ),
                 const SizedBox(width: 12),
                 Consumer<SignUpModel>(
-                  builder: (context, value, child) {
+                  builder: (context, model, child) {
                     return CommonTextButton(
                       onPressed: () {},
                       enabled: signUpModel.buttonActivate(
                         [
+                          //TODO: 휴대폰번호 정규식 추가
                           signUpModel.textFieldControllers[SignUpTextFieldsEnum.phoneNumber]!.text,
                         ],
                       ),
@@ -81,17 +82,19 @@ class _SignUpPhoneCheckPageState extends State<SignUpPhoneCheckPage> {
             const SizedBox(height: 27),
             CommonOutlineTextFormField(
               hintText: '인증번호를 입력해 주세요.',
+              height: 77,
               controller: signUpModel.textFieldControllers[SignUpTextFieldsEnum.phoneAuthCode],
               validator: (value) {
                 if (value != '000000') {
                   return '인증번호가 일치하지 않습니다.';
                 }
+                //TODO: 인증완료후 활성화
                 return null;
               },
             ),
             const Spacer(),
             Consumer<SignUpModel>(
-              builder: (context, value, child) {
+              builder: (context, model, child) {
                 return CommonTextButton(
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {}
