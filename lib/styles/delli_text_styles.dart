@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 
 class DelliTextStyles {
+  static const TextStyle tap = TextStyle(
+    fontFamily: "Pretendard",
+    fontSize: 11,
+    fontWeight: FontWeight.w500,
+    height: 1.27,
+  );
+
   static const TextStyle body1 = TextStyle(
     fontFamily: "Pretendard",
     fontSize: 16,
@@ -26,6 +33,13 @@ class DelliTextStyles {
     fontFamily: "Pretendard",
     fontSize: 14,
     fontWeight: FontWeight.w400,
+    height: 1.43,
+  );
+
+  static const TextStyle body2_500 = TextStyle(
+    fontFamily: "Pretendard",
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
     height: 1.43,
   );
 
