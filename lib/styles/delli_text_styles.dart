@@ -71,7 +71,7 @@ class DelliTextStyles {
     height: 1.4,
   );
 
-  static const TextStyle button_2 = TextStyle(
+  static const TextStyle button2 = TextStyle(
     fontFamily: "Pretendard",
     fontSize: 14,
     fontWeight: FontWeight.w600,
