@@ -20,15 +20,15 @@ class LoginEmailPage extends StatelessWidget {
     return CommonLayout(
       child: Column(
         children: [
-          Spacer(),
-          CommonMainLogo(),
-          SizedBox(height: 16),
-          CommonTextLogo(
+          const Spacer(),
+          const CommonMainLogo(),
+          const SizedBox(height: 16),
+          const CommonTextLogo(
             width: 116,
             height: 45,
           ),
-          Spacer(),
-          _Body(),
+          const Spacer(),
+          const _Body(),
           if(!shownKeyboard)
           const SizedBox(height: 55),
         ],

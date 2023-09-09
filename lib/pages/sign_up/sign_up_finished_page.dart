@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:delli/common_widgets/common_layout.dart';
 import 'package:delli/common_widgets/common_text.dart';
 import 'package:delli/common_widgets/common_text_button.dart';

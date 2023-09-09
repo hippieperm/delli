@@ -17,19 +17,19 @@ class SignUpAgreementPage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: const [
-          SizedBox(height: 100),
+          const SizedBox(height: 100),
           CommonTextLogo(
             width: 83,
             height: 33,
           ),
-          SizedBox(height: 11),
+          const SizedBox(height: 11),
           CommonText(
             text: "환영합니다!",
             textStyle: DelliTextStyles.header2,
           ),
-          Spacer(),
+          const Spacer(),
           _AgreementBody(),
-          SizedBox(height: 55),
+          const SizedBox(height: 55),
         ],
       ),
     );

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-
 import '../../../common_widgets/common_text.dart';
 import '../../../styles/delli_color.dart';
 import '../../../styles/delli_text_styles.dart';

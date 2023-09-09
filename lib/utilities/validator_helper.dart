@@ -17,9 +17,8 @@ class ValidatorHelper {
   }
 
   static String? compareValidator(String? value, String? compareValue) {
-    if(value == null) return null;
-    if(compareValue == null) return null;
+    if(value == null || compareValue == null) return null;
 
-    return value! == compareValue! ? null : "비밀번호가 일치하지 않습니다.";
+    return value == compareValue ? null : "비밀번호가 일치하지 않습니다.";
   }
 }
