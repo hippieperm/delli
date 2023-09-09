@@ -15,7 +15,9 @@ class LoginEmailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CommonLayout(
+    bool shownKeyboard = MediaQuery.of(context).viewInsets.bottom != 0;
+
+    return CommonLayout(
       child: Column(
         children: [
           Spacer(),
@@ -27,7 +29,8 @@ class LoginEmailPage extends StatelessWidget {
           ),
           Spacer(),
           _Body(),
-          SizedBox(height: 55),
+          if(!shownKeyboard)
+          const SizedBox(height: 55),
         ],
       ),
     );

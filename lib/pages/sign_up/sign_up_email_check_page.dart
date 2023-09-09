@@ -13,6 +13,8 @@ class SignUpEmailCheckPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool shownKeyboard = MediaQuery.of(context).viewInsets.bottom != 0;
+
     return CommonLayout(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -26,6 +28,7 @@ class SignUpEmailCheckPage extends StatelessWidget {
           const SizedBox(height: 38),
           CommonOutlineTextFormField(hintText: '인증 코드(6자리)를 입력해 주세요.'),
           const Spacer(),
+          if(!shownKeyboard)
           CommonTextButton(
             onPressed: () {
               context.push("/sign_up/phone_check");
@@ -37,6 +40,7 @@ class SignUpEmailCheckPage extends StatelessWidget {
               color: DelliColor.white,
             ),
           ),
+          if(!shownKeyboard)
           const SizedBox(height: 55),
         ],
       ),
