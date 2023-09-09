@@ -12,6 +12,8 @@ class SignUpNicknameSetupPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool shownKeyboard = MediaQuery.of(context).viewInsets.bottom != 0;
+
     return CommonLayout(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -28,6 +30,7 @@ class SignUpNicknameSetupPage extends StatelessWidget {
             hintText: '미정',
           ),
           Spacer(),
+          if(!shownKeyboard)
           CommonTextButton(
             onPressed: () {
               context.push("/sign_up/finished");
@@ -39,6 +42,7 @@ class SignUpNicknameSetupPage extends StatelessWidget {
               color: DelliColor.white,
             ),
           ),
+          if(!shownKeyboard)
           SizedBox(height: 55),
         ],
       ),

@@ -27,6 +27,8 @@ class _SignUpEmailPasswdPageState extends State<SignUpEmailPasswdPage> {
 
   @override
   Widget build(BuildContext context) {
+    bool shownKeyboard = MediaQuery.of(context).viewInsets.bottom != 0;
+
     return CommonLayout(
       child: Form(
         key: _formKey,
@@ -88,6 +90,7 @@ class _SignUpEmailPasswdPageState extends State<SignUpEmailPasswdPage> {
               },
             ),
             const Spacer(),
+            if(!shownKeyboard)
             CommonTextButton(
               onPressed: () {
                 if (_formKey.currentState!.validate()) {}
@@ -100,6 +103,7 @@ class _SignUpEmailPasswdPageState extends State<SignUpEmailPasswdPage> {
                 color: DelliColor.white,
               ),
             ),
+            if(!shownKeyboard)
             const SizedBox(height: 55),
           ],
         ),

@@ -25,6 +25,7 @@ class _SignUpPhoneCheckPageState extends State<SignUpPhoneCheckPage> {
 
   @override
   Widget build(BuildContext context) {
+    bool shownKeyboard = MediaQuery.of(context).viewInsets.bottom != 0;
 
     return CommonLayout(
       child: Form(
@@ -78,6 +79,7 @@ class _SignUpPhoneCheckPageState extends State<SignUpPhoneCheckPage> {
               },
             ),
             const Spacer(),
+            if(!shownKeyboard)
             CommonTextButton(
               onPressed: () {
                 if (_formKey.currentState!.validate()) {}
@@ -89,6 +91,7 @@ class _SignUpPhoneCheckPageState extends State<SignUpPhoneCheckPage> {
               ),
               height: 62,
             ),
+            if(!shownKeyboard)
             const SizedBox(height: 55),
           ],
         ),
