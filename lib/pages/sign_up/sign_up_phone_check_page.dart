@@ -2,12 +2,10 @@ import 'package:delli/common_widgets/common_layout.dart';
 import 'package:delli/common_widgets/common_outline_text_form_field.dart';
 import 'package:delli/common_widgets/common_text.dart';
 import 'package:delli/common_widgets/common_text_button.dart';
-import 'package:delli/models/sign_up_model.dart';
 import 'package:delli/styles/delli_color.dart';
 import 'package:delli/styles/delli_text_styles.dart';
-import 'package:delli/utilities/validator_helper.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:go_router/go_router.dart';
 
 class SignUpPhoneCheckPage extends StatefulWidget {
   const SignUpPhoneCheckPage({super.key});
@@ -27,7 +25,6 @@ class _SignUpPhoneCheckPageState extends State<SignUpPhoneCheckPage> {
 
   @override
   Widget build(BuildContext context) {
-    final signUpModel = context.read<SignUpModel>();
 
     return CommonLayout(
       child: Form(
@@ -53,29 +50,18 @@ class _SignUpPhoneCheckPageState extends State<SignUpPhoneCheckPage> {
                 Expanded(
                   child: CommonOutlineTextFormField(
                     hintText: '휴대전화 번호를 입력해 주세요.',
-                    controller: signUpModel.textFieldControllers[SignUpTextFieldsEnum.phoneNumber],
                   ),
                 ),
                 const SizedBox(width: 12),
-                Consumer<SignUpModel>(
-                  builder: (context, model, child) {
-                    return CommonTextButton(
-                      onPressed: () {},
-                      enabled: signUpModel.buttonActivate(
-                        [
-                          //TODO: 휴대폰번호 정규식 추가
-                          signUpModel.textFieldControllers[SignUpTextFieldsEnum.phoneNumber]!.text,
-                        ],
-                      ),
-                      commonText: const CommonText(
-                        text: '인증 요청',
-                        textStyle: DelliTextStyles.body1_500,
-                        color: DelliColor.white,
-                      ),
-                      width: 92,
-                      height: 50,
-                    );
-                  },
+                CommonTextButton(
+                  onPressed: () {},
+                  commonText: const CommonText(
+                    text: '인증 요청',
+                    textStyle: DelliTextStyles.body1_500,
+                    color: DelliColor.white,
+                  ),
+                  width: 92,
+                  height: 50,
                 )
               ],
             ),
@@ -83,7 +69,6 @@ class _SignUpPhoneCheckPageState extends State<SignUpPhoneCheckPage> {
             CommonOutlineTextFormField(
               hintText: '인증번호를 입력해 주세요.',
               height: 77,
-              controller: signUpModel.textFieldControllers[SignUpTextFieldsEnum.phoneAuthCode],
               validator: (value) {
                 if (value != '000000') {
                   return '인증번호가 일치하지 않습니다.';
@@ -93,25 +78,16 @@ class _SignUpPhoneCheckPageState extends State<SignUpPhoneCheckPage> {
               },
             ),
             const Spacer(),
-            Consumer<SignUpModel>(
-              builder: (context, model, child) {
-                return CommonTextButton(
-                  onPressed: () {
-                    if (_formKey.currentState!.validate()) {}
-                  },
-                  enabled: signUpModel.buttonActivate(
-                    [
-                      signUpModel.textFieldControllers[SignUpTextFieldsEnum.phoneNumber]!.text,
-                      signUpModel.textFieldControllers[SignUpTextFieldsEnum.phoneAuthCode]!.text,
-                    ],
-                  ),
-                  commonText: const CommonText(
-                    text: '다음',
-                    textStyle: DelliTextStyles.button,
-                  ),
-                  height: 62,
-                );
+            CommonTextButton(
+              onPressed: () {
+                if (_formKey.currentState!.validate()) {}
+                context.push("/sign_up/nickname_setup");
               },
+              commonText: const CommonText(
+                text: '다음',
+                textStyle: DelliTextStyles.button,
+              ),
+              height: 62,
             ),
             const SizedBox(height: 55),
           ],

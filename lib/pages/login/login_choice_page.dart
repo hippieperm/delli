@@ -4,8 +4,8 @@ import 'package:delli/common_widgets/common_svg.dart';
 import 'package:delli/common_widgets/common_text_logo.dart';
 import 'package:delli/pages/login/widgets/login_choice_button.dart';
 import 'package:delli/styles/delli_color.dart';
-import 'package:delli/styles/delli_text_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class LoginChoicePage extends StatelessWidget {
   const LoginChoicePage({Key? key}) : super(key: key);
@@ -50,7 +50,9 @@ class _ChoiceBody extends StatelessWidget {
             color: DelliColor.black,
           ),
           buttonText: "이메일로 시작하기",
-          onTap: () {},
+          onTap: () {
+            context.push("/login_email");
+          },
         ),
         const SizedBox(height: 16),
         LoginChoiceButton(

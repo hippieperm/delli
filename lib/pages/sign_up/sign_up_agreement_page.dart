@@ -4,6 +4,7 @@ import 'package:delli/common_widgets/common_text_logo.dart';
 import 'package:delli/pages/sign_up/widgets/sign_up_agreement_item.dart';
 import 'package:delli/styles/delli_color.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import '../../common_widgets/common_text_button.dart';
 import '../../styles/delli_text_styles.dart';
 
@@ -51,7 +52,9 @@ class _AgreementBody extends StatelessWidget {
         ),
         SizedBox(height: 25),
         CommonTextButton(
-          onPressed: () {},
+          onPressed: () {
+            context.push("/sign_up/email_password");
+          },
           commonText: const CommonText(
             text: "다음",
             textStyle: DelliTextStyles.button,

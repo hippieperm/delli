@@ -4,10 +4,9 @@ import 'package:delli/common_widgets/common_text_button.dart';
 import 'package:delli/styles/delli_text_styles.dart';
 import 'package:delli/utilities/validator_helper.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../common_widgets/common_outline_text_form_field.dart';
-import '../../models/sign_up_model.dart';
 import '../../styles/delli_color.dart';
 
 class SignUpEmailPasswdPage extends StatefulWidget {
@@ -28,8 +27,6 @@ class _SignUpEmailPasswdPageState extends State<SignUpEmailPasswdPage> {
 
   @override
   Widget build(BuildContext context) {
-    final signUpModel = context.read<SignUpModel>();
-
     return CommonLayout(
       child: Form(
         key: _formKey,
@@ -44,7 +41,6 @@ class _SignUpEmailPasswdPageState extends State<SignUpEmailPasswdPage> {
             ),
             const SizedBox(height: 38),
             CommonOutlineTextFormField(
-              controller: signUpModel.textFieldControllers[SignUpTextFieldsEnum.email],
               height: 77,
               hintText: '이메일 주소를 입력해 주세요.',
               validator: (value) {
@@ -53,7 +49,6 @@ class _SignUpEmailPasswdPageState extends State<SignUpEmailPasswdPage> {
             ),
             const SizedBox(height: 18),
             CommonOutlineTextFormField(
-              controller: signUpModel.textFieldControllers[SignUpTextFieldsEnum.password],
               height: 77,
               hintText: '비밀번호를 입력해 주세요.',
               suffixIcon: Padding(
@@ -74,7 +69,6 @@ class _SignUpEmailPasswdPageState extends State<SignUpEmailPasswdPage> {
             ),
             const SizedBox(height: 7),
             CommonOutlineTextFormField(
-              controller: signUpModel.textFieldControllers[SignUpTextFieldsEnum.passwordCheck],
               height: 77,
               hintText: '한번 더 비밀번호를 입력해 주세요.',
               obscureText: true,
@@ -90,33 +84,22 @@ class _SignUpEmailPasswdPageState extends State<SignUpEmailPasswdPage> {
                 ),
               ),
               validator: (value) {
-                return ValidatorHelper.compareValidator(
-                  value,
-                  signUpModel.textFieldControllers[SignUpTextFieldsEnum.password]!.text,
-                );
+
               },
             ),
             const Spacer(),
-            Consumer<SignUpModel>(builder: (context, model, child) {
-              return CommonTextButton(
-                onPressed: () {
-                  if (_formKey.currentState!.validate()) {}
-                },
-                enabled: signUpModel.buttonActivate(
-                  [
-                    signUpModel.textFieldControllers[SignUpTextFieldsEnum.email]!.text,
-                    signUpModel.textFieldControllers[SignUpTextFieldsEnum.password]!.text,
-                    signUpModel.textFieldControllers[SignUpTextFieldsEnum.passwordCheck]!.text,
-                  ],
-                ),
-                height: 62,
-                commonText: const CommonText(
-                  text: '다음',
-                  textStyle: DelliTextStyles.button,
-                  color: DelliColor.white,
-                ),
-              );
-            }),
+            CommonTextButton(
+              onPressed: () {
+                if (_formKey.currentState!.validate()) {}
+                context.push("/sign_up/email_check");
+              },
+              height: 62,
+              commonText: const CommonText(
+                text: '다음',
+                textStyle: DelliTextStyles.button,
+                color: DelliColor.white,
+              ),
+            ),
             const SizedBox(height: 55),
           ],
         ),
