@@ -6,6 +6,7 @@ import 'package:delli/common_widgets/common_text_logo.dart';
 import 'package:delli/styles/delli_color.dart';
 import 'package:delli/styles/delli_text_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../common_widgets/common_outline_text_form_field.dart';
 
@@ -14,19 +15,19 @@ class LoginEmailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CommonLayout(
+    return const CommonLayout(
       child: Column(
         children: [
-          const Spacer(),
-          const CommonMainLogo(),
-          const SizedBox(height: 16),
-          const CommonTextLogo(
+          Spacer(),
+          CommonMainLogo(),
+          SizedBox(height: 16),
+          CommonTextLogo(
             width: 116,
             height: 45,
           ),
-          const Spacer(),
+          Spacer(),
           _Body(),
-          const SizedBox(height: 55),
+          SizedBox(height: 55),
         ],
       ),
     );
@@ -56,9 +57,14 @@ class _Body extends StatelessWidget {
               textStyle: DelliTextStyles.body2,
             ),
             const Spacer(),
-            CommonText(
-              text: "회원가입",
-              textStyle: DelliTextStyles.body2,
+            GestureDetector(
+              onTap: () {
+                context.push("/sign_up");
+              },
+              child: CommonText(
+                text: "회원 가입",
+                textStyle: DelliTextStyles.body2,
+              ),
             ),
           ],
         ),

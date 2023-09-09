@@ -4,6 +4,7 @@ import 'package:delli/common_widgets/common_text_button.dart';
 import 'package:delli/styles/delli_color.dart';
 import 'package:delli/styles/delli_text_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../common_widgets/common_outline_text_form_field.dart';
 
@@ -26,7 +27,9 @@ class SignUpEmailCheckPage extends StatelessWidget {
           CommonOutlineTextFormField(hintText: '인증 코드(6자리)를 입력해 주세요.'),
           const Spacer(),
           CommonTextButton(
-            onPressed: () {},
+            onPressed: () {
+              context.push("/sign_up/phone_check");
+            },
             height: 62,
             commonText: const CommonText(
               text: "다음",

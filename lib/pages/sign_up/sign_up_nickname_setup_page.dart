@@ -5,6 +5,7 @@ import 'package:delli/common_widgets/common_text_button.dart';
 import 'package:delli/styles/delli_color.dart';
 import 'package:delli/styles/delli_text_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class SignUpNicknameSetupPage extends StatelessWidget {
   const SignUpNicknameSetupPage({super.key});
@@ -28,7 +29,9 @@ class SignUpNicknameSetupPage extends StatelessWidget {
           ),
           Spacer(),
           CommonTextButton(
-            onPressed: () {},
+            onPressed: () {
+              context.push("/sign_up/finished");
+            },
             height: 62,
             commonText: CommonText(
               text: '다음',
