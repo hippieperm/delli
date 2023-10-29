@@ -1,7 +1,7 @@
 import 'package:delli/common_widgets/common_layout.dart';
+import 'package:delli/common_widgets/common_svg.dart';
 import 'package:delli/common_widgets/common_text.dart';
 import 'package:delli/common_widgets/common_text_button.dart';
-import 'package:delli/common_widgets/common_text_logo.dart';
 import 'package:delli/styles/delli_color.dart';
 import 'package:delli/styles/delli_text_styles.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +16,11 @@ class SignUpFinishedPage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(height: 102),
-          CommonTextLogo(),
+          CommonSvg(
+            assets: 'assets/logo/text_logo.svg',
+            width: 83,
+            height: 33,
+          ),
           SizedBox(height: 11),
           CommonText(
             text: '닉네임님 환영합니다!',

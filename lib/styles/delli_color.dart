@@ -15,4 +15,5 @@ class DelliColor {
   static const redFF3B30 = Color(0xffff3b30);
   static const pink = Color(0xffF0617C);
   static const battery = Color(0xff0EBB0A);
+  static const transparent = Colors.transparent;
 }

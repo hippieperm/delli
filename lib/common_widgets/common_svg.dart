@@ -4,29 +4,31 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class CommonSvg extends StatelessWidget {
   const CommonSvg({
-    required this.path,
-    this.width,
-    this.height,
+    required this.width,
+    required this.height,
+    required this.assets,
     this.color = DelliColor.main,
     this.blendMode = BlendMode.srcIn,
-    Key? key,
-  }) : super(key: key);
+    this.onTap,
+    super.key,
+  });
 
-  final String path;
-  final double? width;
-  final double? height;
   final Color color;
   final BlendMode blendMode;
+  final double width;
+  final double height;
+  final String assets;
+  final Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
-    return SvgPicture.asset(
-      path,
-      width: width,
-      height: height,
-      colorFilter: ColorFilter.mode(
-        color,
-        blendMode,
+    return GestureDetector(
+      onTap: onTap,
+      child: SvgPicture.asset(
+        assets,
+        width: width,
+        height: height,
+        colorFilter: ColorFilter.mode(color, blendMode),
       ),
     );
   }

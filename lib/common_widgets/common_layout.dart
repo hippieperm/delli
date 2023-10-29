@@ -4,23 +4,23 @@ import 'package:flutter/material.dart';
 class CommonLayout extends StatelessWidget {
   const CommonLayout({
     required this.child,
+    this.appBar,
     Key? key,
   }) : super(key: key);
 
   final Widget child;
+  final AppBar? appBar;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: DelliColor.white,
+      appBar: appBar,
       body: SafeArea(
         child: SizedBox(
           width: double.infinity,
           height: double.infinity,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30),
-            child: child,
-          ),
+          child: child,
         ),
       ),
     );

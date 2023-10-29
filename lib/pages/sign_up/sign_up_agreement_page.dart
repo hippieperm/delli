@@ -1,10 +1,10 @@
 import 'package:delli/common_widgets/common_layout.dart';
 import 'package:delli/common_widgets/common_text.dart';
-import 'package:delli/common_widgets/common_text_logo.dart';
 import 'package:delli/pages/sign_up/widgets/sign_up_agreement_item.dart';
 import 'package:delli/styles/delli_color.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import '../../common_widgets/common_svg.dart';
 import '../../common_widgets/common_text_button.dart';
 import '../../styles/delli_text_styles.dart';
 
@@ -18,7 +18,8 @@ class SignUpAgreementPage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: const [
           const SizedBox(height: 100),
-          CommonTextLogo(
+          CommonSvg(
+            assets: 'assets/logo/text_logo.svg',
             width: 83,
             height: 33,
           ),
