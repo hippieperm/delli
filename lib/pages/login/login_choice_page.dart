@@ -1,7 +1,5 @@
 import 'package:delli/common_widgets/common_layout.dart';
-import 'package:delli/common_widgets/common_main_logo.dart';
 import 'package:delli/common_widgets/common_svg.dart';
-import 'package:delli/common_widgets/common_text_logo.dart';
 import 'package:delli/pages/login/widgets/login_choice_button.dart';
 import 'package:delli/styles/delli_color.dart';
 import 'package:flutter/material.dart';
@@ -16,12 +14,14 @@ class LoginChoicePage extends StatelessWidget {
       child: Column(
         children: [
           Spacer(),
-          CommonMainLogo(
+          CommonSvg(
             width: 86,
             height: 82,
+            assets: 'assets/logo/main_logo.svg',
           ),
           SizedBox(height: 16),
-          CommonTextLogo(
+          CommonSvg(
+            assets: 'assets/logo/text_logo.svg',
             width: 116,
             height: 45,
           ),
@@ -44,7 +44,7 @@ class _ChoiceBody extends StatelessWidget {
         LoginChoiceButton(
           buttonColor: DelliColor.grayF4,
           prefixIcon: const CommonSvg(
-            path: "assets/icon/email_icon.svg",
+            assets: "assets/icon/email_icon.svg",
             width: 24,
             height: 20,
             color: DelliColor.black,

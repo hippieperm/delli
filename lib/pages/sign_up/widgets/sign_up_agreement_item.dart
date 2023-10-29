@@ -28,7 +28,7 @@ class SignUpAgreementItem extends StatelessWidget {
           GestureDetector(
             onTap: onTap,
             child: CommonSvg(
-              path: 'assets/icon/checkbox_icon.svg',
+              assets: 'assets/icon/checkbox_icon.svg',
               color: color,
               width: 24,
               height: 24,

@@ -1,8 +1,7 @@
 import 'package:delli/common_widgets/common_layout.dart';
-import 'package:delli/common_widgets/common_main_logo.dart';
+import 'package:delli/common_widgets/common_svg.dart';
 import 'package:delli/common_widgets/common_text.dart';
 import 'package:delli/common_widgets/common_text_button.dart';
-import 'package:delli/common_widgets/common_text_logo.dart';
 import 'package:delli/styles/delli_color.dart';
 import 'package:delli/styles/delli_text_styles.dart';
 import 'package:flutter/material.dart';
@@ -21,9 +20,14 @@ class LoginEmailPage extends StatelessWidget {
       child: Column(
         children: [
           const Spacer(),
-          const CommonMainLogo(),
+          const CommonSvg(
+            assets: 'assets/logo/main_logo.svg',
+            width: 86,
+            height: 82,
+          ),
           const SizedBox(height: 16),
-          const CommonTextLogo(
+          const CommonSvg(
+            assets: 'assets/logo/text_logo.svg',
             width: 116,
             height: 45,
           ),
