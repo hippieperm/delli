@@ -13,7 +13,6 @@ class DelliColor {
   static const cgrayLt = Color(0xffBAC0C8);
   static const grayF4 = Color(0xfff4f4f4);
   static const redFF3B30 = Color(0xffff3b30);
-  static const red = Color(0xffFF3B30);
   static const pink = Color(0xffF0617C);
   static const battery = Color(0xff0EBB0A);
 }
