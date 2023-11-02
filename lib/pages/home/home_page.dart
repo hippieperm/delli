@@ -554,20 +554,23 @@ class _New extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Row(
-          children: [
-            CommonText(
-              text: '🔥 따끈따끈 최신글',
-              textStyle: DelliTextStyles.header3,
-            ),
-            Spacer(),
-            CommonSvg(
-              width: 24,
-              height: 24,
-              assets: 'assets/icon/right_arrow_icon.svg',
-              color: DelliColor.cgrayLt,
-            )
-          ],
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 24),
+          child: Row(
+            children: [
+              CommonText(
+                text: '🔥 따끈따끈 최신글',
+                textStyle: DelliTextStyles.header3,
+              ),
+              Spacer(),
+              CommonSvg(
+                width: 24,
+                height: 24,
+                assets: 'assets/icon/right_arrow_icon.svg',
+                color: DelliColor.cgrayLt,
+              )
+            ],
+          ),
         ),
         const SizedBox(height: 18),
         Container(
