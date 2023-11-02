@@ -548,13 +548,13 @@ class _CategoryPopular extends StatelessWidget {
 }
 
 class _New extends StatelessWidget {
-  const _New({super.key});
+  const _New();
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Padding(
+        const Padding(
           padding: EdgeInsets.symmetric(horizontal: 24),
           child: Row(
             children: [
@@ -572,7 +572,6 @@ class _New extends StatelessWidget {
             ],
           ),
         ),
-        const SizedBox(height: 18),
         Container(
           width: double.infinity,
           child: Column(
