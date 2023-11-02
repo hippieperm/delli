@@ -676,10 +676,10 @@ class _New extends StatelessWidget {
                           ],
                         ),
                       ),
-                      const SizedBox(width: 16),
-                      SizedBox(
+                      Container(
                         width: 80,
                         height: 80,
+                        margin: EdgeInsets.only(left: 16),
                         child: Container(color: Colors.red),
                       ),
                     ],
@@ -785,10 +785,10 @@ class _New extends StatelessWidget {
                           ],
                         ),
                       ),
-                      const SizedBox(width: 16),
-                      SizedBox(
+                      Container(
                         width: 80,
                         height: 80,
+                        margin: EdgeInsets.only(left: 16),
                         child: Container(color: Colors.red),
                       ),
                     ],
