@@ -552,354 +552,354 @@ class _New extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 24),
-      child: Column(
-        children: [
-          Row(
+    return Column(
+      children: [
+        Row(
+          children: [
+            CommonText(
+              text: '🔥 따끈따끈 최신글',
+              textStyle: DelliTextStyles.header3,
+            ),
+            Spacer(),
+            CommonSvg(
+              width: 24,
+              height: 24,
+              assets: 'assets/icon/right_arrow_icon.svg',
+              color: DelliColor.cgrayLt,
+            )
+          ],
+        ),
+        const SizedBox(height: 18),
+        Container(
+          width: double.infinity,
+          child: Column(
             children: [
-              CommonText(
-                text: '🔥 따끈따끈 최신글',
-                textStyle: DelliTextStyles.header3,
-              ),
-              Spacer(),
-              CommonSvg(
-                width: 24,
-                height: 24,
-                assets: 'assets/icon/right_arrow_icon.svg',
-                color: DelliColor.cgrayLt,
-              )
-            ],
-          ),
-          const SizedBox(height: 18),
-          Container(
-            width: double.infinity,
-            child: Column(
-              children: [
-                Row(
-                  children: [
-                    Expanded(
-                      child: Container(
-                        decoration: BoxDecoration(
-                            border: Border(
-                                bottom: BorderSide(color: DelliColor.grayF4))),
-                        child: Padding(
-                          padding: EdgeInsets.only(top: 18, bottom: 13),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Row(
-                                children: [
-                                  Container(
-                                    height: 20,
-                                    decoration: BoxDecoration(
-                                        color: Colors.indigoAccent,
-                                        borderRadius: BorderRadius.circular(4)),
-                                    child: Center(
-                                      child: Padding(
-                                        padding:
-                                            EdgeInsets.symmetric(horizontal: 4),
-                                        child: CommonText(
-                                          text: '자동차',
-                                          textStyle: DelliTextStyles.body4_500,
-                                          color: DelliColor.white,
-                                        ),
+              Container(
+                padding: EdgeInsets.only(top: 18, bottom: 13),
+                decoration: BoxDecoration(
+                    border:
+                        Border(bottom: BorderSide(color: DelliColor.grayF4))),
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 24),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                Container(
+                                  height: 20,
+                                  decoration: BoxDecoration(
+                                      color: Colors.indigoAccent,
+                                      borderRadius: BorderRadius.circular(4)),
+                                  child: Center(
+                                    child: Padding(
+                                      padding:
+                                          EdgeInsets.symmetric(horizontal: 4),
+                                      child: CommonText(
+                                        text: '자동차',
+                                        textStyle: DelliTextStyles.body4_500,
+                                        color: DelliColor.white,
                                       ),
                                     ),
                                   ),
-                                  const SizedBox(width: 8),
-                                  CommonText(
-                                    text: '11분전',
-                                    textStyle: DelliTextStyles.body4_500,
-                                    color: DelliColor.cgrayLt,
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(height: 6),
-                              CommonText(
-                                text: '글 제목 입니다.',
-                                textStyle: DelliTextStyles.header4,
-                                color: DelliColor.black,
-                              ),
-                              const SizedBox(height: 4),
-                              CommonText(
-                                text:
-                                    '해당 글의 본문 내용 2줄까지 보여주기  해당 글의 본문 내용해당 글의 본문..',
-                                textStyle: DelliTextStyles.body1,
-                                color: DelliColor.gray6c,
-                              ),
-                              const SizedBox(height: 8),
-                              Row(
-                                children: [
-                                  CommonSvg(
-                                    width: 13,
-                                    height: 13,
-                                    assets: 'assets/icon/viewed_icon.svg',
-                                    color: DelliColor.cgrayLt,
-                                  ),
-                                  const SizedBox(width: 4),
-                                  CommonText(
-                                    text: '1M',
-                                    textStyle: DelliTextStyles.body4_500,
-                                    color: DelliColor.cgrayLt,
-                                  ),
-                                  const SizedBox(width: 26),
-                                  CommonSvg(
-                                    width: 13,
-                                    height: 13,
-                                    assets: 'assets/icon/liked_icon.svg',
-                                    color: DelliColor.cgrayLt,
-                                  ),
-                                  const SizedBox(width: 4),
-                                  CommonText(
-                                    text: '3.1K',
-                                    textStyle: DelliTextStyles.body4_500,
-                                    color: DelliColor.cgrayLt,
-                                  ),
-                                  const SizedBox(width: 26),
-                                  CommonSvg(
-                                    width: 13,
-                                    height: 13,
-                                    assets: 'assets/icon/comment_icon.svg',
-                                    color: DelliColor.cgrayLt,
-                                  ),
-                                  const SizedBox(width: 4),
-                                  CommonText(
-                                    text: '400',
-                                    textStyle: DelliTextStyles.body4_500,
-                                    color: DelliColor.cgrayLt,
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
+                                ),
+                                const SizedBox(width: 8),
+                                CommonText(
+                                  text: '11분전',
+                                  textStyle: DelliTextStyles.body4_500,
+                                  color: DelliColor.cgrayLt,
+                                ),
+                              ],
+                            ),
+                            const SizedBox(height: 6),
+                            CommonText(
+                              text: '글 제목 입니다.',
+                              textStyle: DelliTextStyles.header4,
+                              color: DelliColor.black,
+                            ),
+                            const SizedBox(height: 4),
+                            CommonText(
+                              text:
+                                  '해당 글의 본문 내용 2줄까지 보여주기  해당 글의 본문 내용해당 글의 본문..',
+                              textStyle: DelliTextStyles.body1,
+                              color: DelliColor.gray6c,
+                            ),
+                            const SizedBox(height: 8),
+                            Row(
+                              children: [
+                                CommonSvg(
+                                  width: 13,
+                                  height: 13,
+                                  assets: 'assets/icon/viewed_icon.svg',
+                                  color: DelliColor.cgrayLt,
+                                ),
+                                const SizedBox(width: 4),
+                                CommonText(
+                                  text: '1M',
+                                  textStyle: DelliTextStyles.body4_500,
+                                  color: DelliColor.cgrayLt,
+                                ),
+                                const SizedBox(width: 26),
+                                CommonSvg(
+                                  width: 13,
+                                  height: 13,
+                                  assets: 'assets/icon/liked_icon.svg',
+                                  color: DelliColor.cgrayLt,
+                                ),
+                                const SizedBox(width: 4),
+                                CommonText(
+                                  text: '3.1K',
+                                  textStyle: DelliTextStyles.body4_500,
+                                  color: DelliColor.cgrayLt,
+                                ),
+                                const SizedBox(width: 26),
+                                CommonSvg(
+                                  width: 13,
+                                  height: 13,
+                                  assets: 'assets/icon/comment_icon.svg',
+                                  color: DelliColor.cgrayLt,
+                                ),
+                                const SizedBox(width: 4),
+                                CommonText(
+                                  text: '400',
+                                  textStyle: DelliTextStyles.body4_500,
+                                  color: DelliColor.cgrayLt,
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
                       ),
-                    ),
-                    const SizedBox(width: 16),
-                    SizedBox(
-                      width: 80,
-                      height: 80,
-                      child: Container(color: Colors.red),
-                    ),
-                  ],
+                      const SizedBox(width: 16),
+                      SizedBox(
+                        width: 80,
+                        height: 80,
+                        child: Container(color: Colors.red),
+                      ),
+                    ],
+                  ),
                 ),
-                Container(
-                  decoration: BoxDecoration(
-                      border:
-                          Border(bottom: BorderSide(color: DelliColor.grayF4))),
-                  child: Padding(
-                    padding: EdgeInsets.only(top: 18, bottom: 13),
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Row(
-                                children: [
-                                  Container(
-                                    height: 20,
-                                    decoration: BoxDecoration(
-                                        color: Colors.indigoAccent,
-                                        borderRadius: BorderRadius.circular(4)),
-                                    child: Center(
-                                      child: Padding(
-                                        padding:
-                                            EdgeInsets.symmetric(horizontal: 4),
-                                        child: CommonText(
-                                          text: '자동차',
-                                          textStyle: DelliTextStyles.body4_500,
-                                          color: DelliColor.white,
-                                        ),
+              ),
+              Container(
+                padding: EdgeInsets.only(top: 18, bottom: 13),
+                decoration: BoxDecoration(
+                    border:
+                        Border(bottom: BorderSide(color: DelliColor.grayF4))),
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 24),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                Container(
+                                  height: 20,
+                                  decoration: BoxDecoration(
+                                      color: Colors.indigoAccent,
+                                      borderRadius: BorderRadius.circular(4)),
+                                  child: Center(
+                                    child: Padding(
+                                      padding:
+                                          EdgeInsets.symmetric(horizontal: 4),
+                                      child: CommonText(
+                                        text: '자동차',
+                                        textStyle: DelliTextStyles.body4_500,
+                                        color: DelliColor.white,
                                       ),
                                     ),
                                   ),
-                                  const SizedBox(width: 8),
-                                  CommonText(
-                                    text: '11분전',
-                                    textStyle: DelliTextStyles.body4_500,
-                                    color: DelliColor.cgrayLt,
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(height: 6),
-                              CommonText(
-                                text: '글 제목이 2줄 이상 넘어갈 경우에는 이렇게 보여주도록 합니다',
-                                textStyle: DelliTextStyles.header4,
-                                color: DelliColor.black,
-                              ),
-                              const SizedBox(height: 4),
-                              CommonText(
-                                text:
-                                    '해당 글의 본문 내용 2줄까지 보여주기  해당 글의 본문 내용해당 글의 본문..',
-                                textStyle: DelliTextStyles.body1,
-                                color: DelliColor.gray6c,
-                              ),
-                              const SizedBox(height: 8),
-                              Row(
-                                children: [
-                                  CommonSvg(
-                                    width: 13,
-                                    height: 13,
-                                    assets: 'assets/icon/viewed_icon.svg',
-                                    color: DelliColor.cgrayLt,
-                                  ),
-                                  const SizedBox(width: 4),
-                                  CommonText(
-                                    text: '1M',
-                                    textStyle: DelliTextStyles.body4_500,
-                                    color: DelliColor.cgrayLt,
-                                  ),
-                                  const SizedBox(width: 26),
-                                  CommonSvg(
-                                    width: 13,
-                                    height: 13,
-                                    assets: 'assets/icon/liked_icon.svg',
-                                    color: DelliColor.cgrayLt,
-                                  ),
-                                  const SizedBox(width: 4),
-                                  CommonText(
-                                    text: '3.1K',
-                                    textStyle: DelliTextStyles.body4_500,
-                                    color: DelliColor.cgrayLt,
-                                  ),
-                                  const SizedBox(width: 26),
-                                  CommonSvg(
-                                    width: 13,
-                                    height: 13,
-                                    assets: 'assets/icon/comment_icon.svg',
-                                    color: DelliColor.cgrayLt,
-                                  ),
-                                  const SizedBox(width: 4),
-                                  CommonText(
-                                    text: '400',
-                                    textStyle: DelliTextStyles.body4_500,
-                                    color: DelliColor.cgrayLt,
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
+                                ),
+                                const SizedBox(width: 8),
+                                CommonText(
+                                  text: '11분전',
+                                  textStyle: DelliTextStyles.body4_500,
+                                  color: DelliColor.cgrayLt,
+                                ),
+                              ],
+                            ),
+                            const SizedBox(height: 6),
+                            CommonText(
+                              text: '글 제목이 2줄 이상 넘어갈 경우에는 이렇게 보여주도록 합니다',
+                              textStyle: DelliTextStyles.header4,
+                              color: DelliColor.black,
+                            ),
+                            const SizedBox(height: 4),
+                            CommonText(
+                              text:
+                                  '해당 글의 본문 내용 2줄까지 보여주기  해당 글의 본문 내용해당 글의 본문..',
+                              textStyle: DelliTextStyles.body1,
+                              color: DelliColor.gray6c,
+                            ),
+                            const SizedBox(height: 8),
+                            Row(
+                              children: [
+                                CommonSvg(
+                                  width: 13,
+                                  height: 13,
+                                  assets: 'assets/icon/viewed_icon.svg',
+                                  color: DelliColor.cgrayLt,
+                                ),
+                                const SizedBox(width: 4),
+                                CommonText(
+                                  text: '1M',
+                                  textStyle: DelliTextStyles.body4_500,
+                                  color: DelliColor.cgrayLt,
+                                ),
+                                const SizedBox(width: 26),
+                                CommonSvg(
+                                  width: 13,
+                                  height: 13,
+                                  assets: 'assets/icon/liked_icon.svg',
+                                  color: DelliColor.cgrayLt,
+                                ),
+                                const SizedBox(width: 4),
+                                CommonText(
+                                  text: '3.1K',
+                                  textStyle: DelliTextStyles.body4_500,
+                                  color: DelliColor.cgrayLt,
+                                ),
+                                const SizedBox(width: 26),
+                                CommonSvg(
+                                  width: 13,
+                                  height: 13,
+                                  assets: 'assets/icon/comment_icon.svg',
+                                  color: DelliColor.cgrayLt,
+                                ),
+                                const SizedBox(width: 4),
+                                CommonText(
+                                  text: '400',
+                                  textStyle: DelliTextStyles.body4_500,
+                                  color: DelliColor.cgrayLt,
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
-                        const SizedBox(width: 16),
-                        SizedBox(
-                          width: 80,
-                          height: 80,
-                          child: Container(color: Colors.red),
-                        ),
-                      ],
-                    ),
+                      ),
+                      const SizedBox(width: 16),
+                      SizedBox(
+                        width: 80,
+                        height: 80,
+                        child: Container(color: Colors.red),
+                      ),
+                    ],
                   ),
                 ),
-                Container(
-                  decoration: BoxDecoration(
-                      border:
-                          Border(bottom: BorderSide(color: DelliColor.grayF4))),
-                  child: Padding(
-                    padding: EdgeInsets.only(top: 18, bottom: 13),
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Row(
-                                children: [
-                                  Container(
-                                    height: 20,
-                                    decoration: BoxDecoration(
-                                        color: Colors.indigoAccent,
-                                        borderRadius: BorderRadius.circular(4)),
-                                    child: Center(
-                                      child: Padding(
-                                        padding:
-                                            EdgeInsets.symmetric(horizontal: 4),
-                                        child: CommonText(
-                                          text: '자동차',
-                                          textStyle: DelliTextStyles.body4_500,
-                                          color: DelliColor.white,
-                                        ),
+              ),
+              Container(
+                padding: EdgeInsets.only(top: 18, bottom: 13),
+                decoration: BoxDecoration(
+                    border:
+                        Border(bottom: BorderSide(color: DelliColor.grayF4))),
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 24),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Row(
+                              children: [
+                                Container(
+                                  height: 20,
+                                  decoration: BoxDecoration(
+                                      color: Colors.indigoAccent,
+                                      borderRadius: BorderRadius.circular(4)),
+                                  child: Center(
+                                    child: Padding(
+                                      padding:
+                                          EdgeInsets.symmetric(horizontal: 4),
+                                      child: CommonText(
+                                        text: '자동차',
+                                        textStyle: DelliTextStyles.body4_500,
+                                        color: DelliColor.white,
                                       ),
                                     ),
                                   ),
-                                  const SizedBox(width: 8),
-                                  CommonText(
-                                    text: '11분전',
-                                    textStyle: DelliTextStyles.body4_500,
-                                    color: DelliColor.cgrayLt,
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(height: 6),
-                              CommonText(
-                                text:
-                                    '사진이 없고 글만 있는 형태의 게시글, 제목이 2줄 이상 넘어갈 경우에는 이렇게 보여주도록..',
-                                textStyle: DelliTextStyles.header4,
-                                color: DelliColor.black,
-                              ),
-                              const SizedBox(height: 4),
-                              CommonText(
-                                text:
-                                    '해당 글의 본문 내용 2줄까지 보여주기  해당 글의 본문 내용해당 글의 본문..',
-                                textStyle: DelliTextStyles.body1,
-                                color: DelliColor.gray6c,
-                              ),
-                              const SizedBox(height: 8),
-                              Row(
-                                children: [
-                                  CommonSvg(
-                                    width: 13,
-                                    height: 13,
-                                    assets: 'assets/icon/viewed_icon.svg',
-                                    color: DelliColor.cgrayLt,
-                                  ),
-                                  const SizedBox(width: 4),
-                                  CommonText(
-                                    text: '1M',
-                                    textStyle: DelliTextStyles.body4_500,
-                                    color: DelliColor.cgrayLt,
-                                  ),
-                                  const SizedBox(width: 26),
-                                  CommonSvg(
-                                    width: 13,
-                                    height: 13,
-                                    assets: 'assets/icon/liked_icon.svg',
-                                    color: DelliColor.cgrayLt,
-                                  ),
-                                  const SizedBox(width: 4),
-                                  CommonText(
-                                    text: '3.1K',
-                                    textStyle: DelliTextStyles.body4_500,
-                                    color: DelliColor.cgrayLt,
-                                  ),
-                                  const SizedBox(width: 26),
-                                  CommonSvg(
-                                    width: 13,
-                                    height: 13,
-                                    assets: 'assets/icon/comment_icon.svg',
-                                    color: DelliColor.cgrayLt,
-                                  ),
-                                  const SizedBox(width: 4),
-                                  CommonText(
-                                    text: '400',
-                                    textStyle: DelliTextStyles.body4_500,
-                                    color: DelliColor.cgrayLt,
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
+                                ),
+                                const SizedBox(width: 8),
+                                CommonText(
+                                  text: '11분전',
+                                  textStyle: DelliTextStyles.body4_500,
+                                  color: DelliColor.cgrayLt,
+                                ),
+                              ],
+                            ),
+                            const SizedBox(height: 6),
+                            CommonText(
+                              text:
+                                  '사진이 없고 글만 있는 형태의 게시글, 제목이 2줄 이상 넘어갈 경우에는 이렇게 보여주도록..',
+                              textStyle: DelliTextStyles.header4,
+                              color: DelliColor.black,
+                            ),
+                            const SizedBox(height: 4),
+                            CommonText(
+                              text:
+                                  '해당 글의 본문 내용 2줄까지 보여주기  해당 글의 본문 내용해당 글의 본문..',
+                              textStyle: DelliTextStyles.body1,
+                              color: DelliColor.gray6c,
+                            ),
+                            const SizedBox(height: 8),
+                            Row(
+                              children: [
+                                CommonSvg(
+                                  width: 13,
+                                  height: 13,
+                                  assets: 'assets/icon/viewed_icon.svg',
+                                  color: DelliColor.cgrayLt,
+                                ),
+                                const SizedBox(width: 4),
+                                CommonText(
+                                  text: '1M',
+                                  textStyle: DelliTextStyles.body4_500,
+                                  color: DelliColor.cgrayLt,
+                                ),
+                                const SizedBox(width: 26),
+                                CommonSvg(
+                                  width: 13,
+                                  height: 13,
+                                  assets: 'assets/icon/liked_icon.svg',
+                                  color: DelliColor.cgrayLt,
+                                ),
+                                const SizedBox(width: 4),
+                                CommonText(
+                                  text: '3.1K',
+                                  textStyle: DelliTextStyles.body4_500,
+                                  color: DelliColor.cgrayLt,
+                                ),
+                                const SizedBox(width: 26),
+                                CommonSvg(
+                                  width: 13,
+                                  height: 13,
+                                  assets: 'assets/icon/comment_icon.svg',
+                                  color: DelliColor.cgrayLt,
+                                ),
+                                const SizedBox(width: 4),
+                                CommonText(
+                                  text: '400',
+                                  textStyle: DelliTextStyles.body4_500,
+                                  color: DelliColor.cgrayLt,
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
