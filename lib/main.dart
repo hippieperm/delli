@@ -1,8 +1,10 @@
 import 'package:delli/router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
@@ -11,6 +13,7 @@ void main() {
       statusBarBrightness: Brightness.light,
     ),
   );
+  await dotenv.load(fileName: ".env");
   runApp(const DelliApp());
 }
 
