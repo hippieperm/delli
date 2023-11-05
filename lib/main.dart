@@ -24,6 +24,9 @@ class DelliApp extends StatelessWidget {
       routerConfig: router,
       theme: ThemeData(
         fontFamily: "Pretendard",
+        appBarTheme: const AppBarTheme(
+          systemOverlayStyle: SystemUiOverlayStyle.dark,
+        ),
       ),
       builder: (context, child) {
         return MediaQuery(
