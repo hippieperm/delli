@@ -879,7 +879,7 @@ class _New extends StatelessWidget {
                           ),
                           SizedBox(width: 4),
                           CommonText(
-                            text: '400',
+                            text: '300',
                             textStyle: DelliTextStyles.body4_500,
                             color: DelliColor.cgrayLt,
                           ),
